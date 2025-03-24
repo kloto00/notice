@@ -115,8 +115,11 @@ class NoticeServiceTest {
         // Given
         String keyword = "테스트";
 
+        String searchStartDate = "2025-01-01";
+        String searchEndDate = "2025-12-31";
+
         // When
-        Page<NoticeResponseDto> searchedNotices = noticeService.searchNotices(keyword, 0, 10);
+        Page<NoticeResponseDto> searchedNotices = noticeService.searchNotices(keyword, searchStartDate, searchEndDate, 0, 10);
 
         // Then
         assertThat(searchedNotices).isNotNull();

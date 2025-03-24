@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.notice.service.NoticeServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-24T02:29:52.546Z" hostname="DESKTOP-60PJR76" time="0.647">
+<testsuite name="com.example.notice.service.NoticeServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-24T03:32:16.133Z" hostname="DESKTOP-60PJR76" time="20.815">
   <properties/>
-  <testcase name="deleteNotice()" classname="com.example.notice.service.NoticeServiceTest" time="0.647"/>
-  <system-out><![CDATA[11:29:47.211 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.notice.service.NoticeServiceTest]: NoticeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:29:47.343 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.notice.NoticeApplication for test class com.example.notice.service.NoticeServiceTest
+  <testcase name="searchNotices()" classname="com.example.notice.service.NoticeServiceTest" time="20.815"/>
+  <system-out><![CDATA[12:32:10.829 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.notice.service.NoticeServiceTest]: NoticeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:32:10.956 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.notice.NoticeApplication for test class com.example.notice.service.NoticeServiceTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,19 +14,19 @@
 
  :: Spring Boot ::                (v3.4.4)
 
-2025-03-24T11:29:47.856+09:00  INFO 22812 --- [notice] [    Test worker] c.e.notice.service.NoticeServiceTest     : Starting NoticeServiceTest using Java 21.0.6 with PID 22812 (started by kloto in C:\Users\kloto\IdeaProjects\notice)
-2025-03-24T11:29:47.857+09:00  INFO 22812 --- [notice] [    Test worker] c.e.notice.service.NoticeServiceTest     : No active profile set, falling back to 1 default profile: "default"
-2025-03-24T11:29:48.646+09:00  INFO 22812 --- [notice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-03-24T11:29:48.721+09:00  INFO 22812 --- [notice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
-2025-03-24T11:29:49.258+09:00  INFO 22812 --- [notice] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-03-24T11:29:49.348+09:00  INFO 22812 --- [notice] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-03-24T11:29:49.394+09:00  INFO 22812 --- [notice] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-03-24T11:29:49.742+09:00  INFO 22812 --- [notice] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-03-24T11:29:49.779+09:00  INFO 22812 --- [notice] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-24T11:29:49.965+09:00  INFO 22812 --- [notice] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notice user=NOTICE
-2025-03-24T11:29:49.968+09:00  INFO 22812 --- [notice] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-24T11:29:49.997+09:00  WARN 22812 --- [notice] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-03-24T11:29:50.019+09:00  INFO 22812 --- [notice] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-03-24T12:32:11.491+09:00  INFO 59932 --- [notice] [    Test worker] c.e.notice.service.NoticeServiceTest     : Starting NoticeServiceTest using Java 21.0.6 with PID 59932 (started by kloto in C:\Users\kloto\IdeaProjects\notice)
+2025-03-24T12:32:11.492+09:00  INFO 59932 --- [notice] [    Test worker] c.e.notice.service.NoticeServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2025-03-24T12:32:12.253+09:00  INFO 59932 --- [notice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-24T12:32:12.327+09:00  INFO 59932 --- [notice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2025-03-24T12:32:12.858+09:00  INFO 59932 --- [notice] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-24T12:32:12.948+09:00  INFO 59932 --- [notice] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-24T12:32:12.997+09:00  INFO 59932 --- [notice] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-24T12:32:13.367+09:00  INFO 59932 --- [notice] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-24T12:32:13.413+09:00  INFO 59932 --- [notice] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-24T12:32:13.614+09:00  INFO 59932 --- [notice] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notice user=NOTICE
+2025-03-24T12:32:13.616+09:00  INFO 59932 --- [notice] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-24T12:32:13.646+09:00  WARN 59932 --- [notice] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-24T12:32:13.671+09:00  INFO 59932 --- [notice] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -34,7 +34,7 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-03-24T11:29:51.020+09:00  INFO 22812 --- [notice] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-24T12:32:14.695+09:00  INFO 59932 --- [notice] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists attachment cascade 
 Hibernate: 
@@ -66,17 +66,10 @@ Hibernate:
        add constraint FK9kimkt5aliowdkvbw25000h1y 
        foreign key (notice_id) 
        references notice
-2025-03-24T11:29:51.071+09:00  INFO 22812 --- [notice] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-03-24T11:29:52.029+09:00  WARN 22812 --- [notice] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-03-24T11:29:52.454+09:00  INFO 22812 --- [notice] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notice'
-2025-03-24T11:29:52.531+09:00  INFO 22812 --- [notice] [    Test worker] c.e.notice.service.NoticeServiceTest     : Started NoticeServiceTest in 5.009 seconds (process running for 6.33)
-Hibernate: 
-    insert 
-    into
-        notice
-        (author, content, created_at, end_date, start_date, title, view_count, id) 
-    values
-        (?, ?, ?, ?, ?, ?, ?, default)
+2025-03-24T12:32:14.751+09:00  INFO 59932 --- [notice] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-24T12:32:15.643+09:00  WARN 59932 --- [notice] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-24T12:32:16.032+09:00  INFO 59932 --- [notice] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notice'
+2025-03-24T12:32:16.115+09:00  INFO 59932 --- [notice] [    Test worker] c.e.notice.service.NoticeServiceTest     : Started NoticeServiceTest in 4.963 seconds (process running for 6.596)
 Hibernate: 
     select
         n1_0.id,
@@ -90,39 +83,11 @@ Hibernate:
     from
         notice n1_0 
     where
-        n1_0.id=?
-Hibernate: 
-    select
-        a1_0.notice_id,
-        a1_0.id,
-        a1_0.file_name,
-        a1_0.file_path,
-        a1_0.file_url,
-        a1_0.original_file_name 
-    from
-        attachment a1_0 
-    where
-        a1_0.notice_id=?
-Hibernate: 
-    delete 
-    from
-        notice 
-    where
-        id=?
-Hibernate: 
-    select
-        n1_0.id,
-        n1_0.author,
-        n1_0.content,
-        n1_0.created_at,
-        n1_0.end_date,
-        n1_0.start_date,
-        n1_0.title,
-        n1_0.view_count 
-    from
-        notice n1_0 
-    where
-        n1_0.id=?
+        n1_0.created_at between ? and ? 
+        and n1_0.title like ? escape '\' 
+        or n1_0.content like ? escape '\' 
+    fetch
+        first ? rows only
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (C:\Users\kloto\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)

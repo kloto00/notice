@@ -4,6 +4,7 @@ import com.example.notice.dto.NoticeRequestDto;
 import com.example.notice.dto.NoticeResponseDto;
 import com.example.notice.exception.NotFoundException;
 import com.example.notice.service.NoticeService;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -47,9 +48,11 @@ public class NoticeController {
     @GetMapping("/notices/search")
     public Page<NoticeResponseDto> searchNotices(
             @RequestParam(value = "keyword", required = false, defaultValue = "") String keyword,
+            @RequestParam(value = "searchStartDate", required = false, defaultValue = "") @Parameter(description = "yyyy-MM-dd") String searchStartDate,
+            @RequestParam(value = "searchEndDate", required = false, defaultValue = "") @Parameter(description = "yyyy-MM-dd") String searchEndDate,
             @RequestParam(value = "page", required = false, defaultValue = "0") int page,
             @RequestParam(value = "size", required = false, defaultValue = "10") int size) {
-        return noticeService.searchNotices(keyword, page, size);
+        return noticeService.searchNotices(keyword, searchStartDate, searchEndDate, page, size);
     }
 
 

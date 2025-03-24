@@ -17,6 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -138,11 +140,19 @@ public class NoticeService {
                 .collect(Collectors.toList());
     }
 
-    @Cacheable(value = "notices", key = "#keyword + '-' + #page + '-' + #size")
-    public Page<NoticeResponseDto> searchNotices(String keyword, int page, int size) {
+    @Cacheable(value = "notices", key = "#keyword + '-' + #page + '-' + #size + '-' + #searchStartDateStr + '-' + #searchEndDateStr" )
+    public Page<NoticeResponseDto> searchNotices(String keyword, String searchStartDateStr, String searchEndDateStr, int page, int size) {
         Pageable pageable = PageRequest.of(page, size); // 페이지 및 크기 설정
 
-        Page<Notice> noticePage = noticeRepository.findByTitleContainingOrContentContaining(keyword, keyword, pageable);
+        // LocalDate로 문자열 파싱
+        LocalDate searchStartDate = searchStartDateStr != null ? LocalDate.parse(searchStartDateStr, DateTimeFormatter.ISO_DATE) : null;
+        LocalDate searchEndDate = searchEndDateStr != null ? LocalDate.parse(searchEndDateStr, DateTimeFormatter.ISO_DATE) : null;
+
+
+        Page<Notice> noticePage = noticeRepository.searchNotice(
+                searchStartDate != null ? searchStartDate.atStartOfDay() : null,
+                searchEndDate != null ? searchEndDate.atTime(23, 59, 59) : null,
+                keyword, keyword, pageable);
 
         return noticePage.map(notice -> NoticeResponseDto.builder()
                 .id(notice.getId())

@@ -1,8 +1,8 @@
 package com.example.notice.dto;
 
-import com.example.notice.entity.Notice;
 import lombok.Builder;
 import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
